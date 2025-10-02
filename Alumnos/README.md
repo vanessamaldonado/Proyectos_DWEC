@@ -1,4 +1,5 @@
 # IES Son Ferrer Curso 2025-26
-Bienvenido a este repositorio del Grado Superior **Técnico superior en Desarrollo de aplicaciones Web**, donde encontrarás los proyectos realizados durante el curso 2025/26 del módulo **DWEC**.
+Bienvenido a este repositorio del Grado Superior **Técnico superior en Desarrollo de aplicaciones Web**, que será tu herramienta de trabajo para todos los proyectos del módulo DWEC.
 
-## 📌 **Proyectos disponibles**
+## 📌 **¿Cómo trabajar con este repositorio?**
+
