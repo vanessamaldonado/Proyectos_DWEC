@@ -9,7 +9,7 @@ Abre la terminal y ejecuta:
 ```bash
 git clone https://github.com/vanessamaldonado/Proyectos_DWEC.git
 cd proyectos-DWEC 
----
+```
 
 ### 2️⃣ Crear tu rama personal
 
@@ -17,19 +17,21 @@ Usa tu nombre o identificador en el nombre de la rama, por ejemplo:
 
 ```bash
 git checkout -b blackjack-vane
+```
 
 Esto crea y activa tu propia rama.
-
 Comprueba que estás en la rama correcta con:
 
 ```bash
 git branch
+```
 
 Debe aparecer algo como:
 
 ```bash
 * blackjack-vane
   master
+```
 
 ### 3️⃣ Crear tu carpeta blackjack
 
@@ -38,6 +40,7 @@ En la raíz del proyecto (al mismo nivel que la carpeta del profesor Blackjack):
 ```bash
 mkdir blackjack-vane
 cd blackjack-vane
+```
 
 ### 4️⃣ Desarrollar tu versión
 
@@ -54,15 +57,16 @@ Cuando termines o quieras guardar tu progreso:
 ```bash
 git add .
 git commit -m "Versión personal del juego Blackjack"
+```
 
 ### 6️⃣ Subir tu rama a GitHub
 
 Ejecuta:
 
 ```bash
-git push -u origin blackjack-ana
-
-Esto crea tu rama blackjack-ana también en el repositorio remoto de GitHub.
+git push -u origin blackjack-vane
+```
+Esto crea tu rama blackjack-vane también en el repositorio remoto de GitHub.
 
 ### 7️⃣ Verificar en GitHub
 
