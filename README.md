@@ -9,6 +9,7 @@ Abre la terminal y ejecuta:
 ```bash
 git clone https://github.com/vanessamaldonado/Proyectos_DWEC.git
 cd proyectos-DWEC 
+---
 
 ### 2️⃣ Crear tu rama personal
 
