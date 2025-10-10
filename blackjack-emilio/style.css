@@ -11,67 +11,80 @@ h1 {
   color: rgb(187, 197, 50);
 }
 
-/* #center{
-
-    width: 80%;
-    height: 700px;
-    background: #178520d8;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    font-size: 1.5rem;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
-    margin: auto
-
-} */
-
+/* ======== MESA PRINCIPAL ======== */
 .table {
-  width: 70vw; 
-  height: 30vw;
-  background: #0b6623; 
+  width: 70vw;
+  height: 34vw;
+  background: #0b6623;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
-  border: 5px solid #5a2e0e; 
+  border: 5px solid #5a2e0e;
   border-top: none;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7);
   margin: auto;
-}
-.table1{
-height: 40%;
-background-color: #0b662300;
 
-}
-.table2{height: 60%;
-  background-color: #0b662300;
-
+  display: grid;
+  grid-template-rows: 1fr 1fr; /* arriba dealer, abajo jugador */
+  align-items: start;
 }
 
-
-.dealerText {
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #fff;
-  font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  background: #0b662300;
+.table1,
+.table2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: transparent;
+  padding-top: 18px;
 }
+
+/* ======== TEXTOS DE DEALER Y JUGADOR ======== */
+.dealerText,
 .playerText {
-  position: absolute;
-  top: 63%;
-  left: 50%;
-  transform: translateX(-50%);
+  position: static; /* antes era absolute */
+  transform: none;
+  margin: 6px 0 8px 0;
   color: #fff;
   font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: #0b662300;
+  background: transparent;
 }
 
+/* ======== VALORES (PUNTOS) ======== */
+.valueText {
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+  margin-top: 8px;
+  background: transparent;
+}
+
+/* ======== CARTAS ======== */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  background: transparent;
+}
+
+.card {
+  width: 56px; /* más pequeñas */
+  height: 80px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+}
+
+/* BOTONES */
 .buttons {
   display: flex;
   justify-content: center;
@@ -80,7 +93,7 @@ background-color: #0b662300;
   width: 100%;
 }
 
-/* Estilo base común para todos los botones */
+/* Estilo base común */
 .buttons button {
   width: 150px;
   height: 40px;
@@ -96,7 +109,7 @@ background-color: #0b662300;
 
 /* Botón: Empezar partida */
 .startGame {
-  background-color: #3a91d1; /* azul más suave */
+  background-color: #3a91d1;
 }
 .startGame:hover {
   background-color: #3182c3;
@@ -105,7 +118,7 @@ background-color: #0b662300;
 
 /* Botón: Pedir carta */
 .hit {
-  background-color: #69c04a; /* verde más fresco */
+  background-color: #69c04a;
 }
 .hit:hover {
   background-color: #5ab03d;
@@ -114,26 +127,10 @@ background-color: #0b662300;
 
 /* Botón: Plantarse */
 .stand {
-  background-color: #d94343; /* rojo más suave */
+  background-color: #d94343;
 }
 .stand:hover {
   background-color: #c63b3b;
   transform: translateY(-2px);
 }
 
-.scoreboard {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 1.8rem;
-  color: #f1f1f1;
-  letter-spacing: 1px;
-  background: transparent;
-}
-
-.scoreboard span {
-  font-weight: bold;
-  color: #cab10b;
-}

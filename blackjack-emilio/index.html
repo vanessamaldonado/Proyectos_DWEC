@@ -6,27 +6,36 @@
     <title>Blackjack</title>
 
     <link rel="stylesheet" href="style.css" />
-    <script src="code.js"></script>
+    <script defer src="code.js"></script>
   </head>
+
+
   <body>
     <h1>Blackjack</h1>
 
-    <div class="table">
-      <div class="table1"><h2 class="dealerText">Dealer</h2></div>
 
-      <div class="table2"><h2 class="playerText">Jugador</h2></div>
-    </div>
+<!-- div de la mesa --> 
+<div class="table">
+  <div class="table1">
+    <h2 class="dealerText">Dealer</h2>
+    <div id="dealerCards" class="cards"></div>
+    <p id="dealerValue" class="valueText"></p>
+  </div>
 
+  <div class="table2">
+    <p id="playerValue" class="valueText"></p>
+    <div id="playerCards" class="cards"></div>
+    <h2 class="playerText">Jugador</h2> 
+  </div>
+</div>
+
+
+<!-- div de los botones-->
     <div class="buttons">
       <button class="startGame">Empezar partida</button>
       <button class="hit">Pedir carta</button>
       <button class="stand">Plantarse</button>
     </div>
-    <div class="scoreboard">
-      <p>
-        Dealer: <span id="dealerScore">0</span> | Jugador:
-        <span id="playerScore">0</span>
-      </p>
-    </div>
+    
   </body>
 </html>
