@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Black Jack</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+
+
+<body>
+  <div id="header">
+    <a href="https://pnsd.sanidad.gob.es/ciudadanos/informacion/otrasAdicciones/home.htm" target="_blank">
+      <img src="img/logo_ministerio.jpg" alt="Logo ministerio de salud, ludopatía" />
+    </a>
+    <h1>Black Jack</h1>
+  </div>
+
+  <div id="points">
+    <p id="playerPoints">Jugador: 0 puntos.</p>
+    <p id="dealerPoints">Dealer: 0 puntos.</p>
+  </div>
+
+  <div id="card-section">
+
+    <p id="player">Jugador</p>
+
+    <p id="dealer">Dealer</p>
+
+    <div id="playerImage">
+      <p></p>
+    </div>
+    <div id="dealerImage">
+      <p></p>
+    </div>
+
+    <img src="img/cards.png" alt="Cartas">
+
+
+  </div>
+
+
+  <div id="buttons">
+    
+    <button id="newGame">Nuevo juego</button>
+    <button id="drawCard">Robar carta</button>
+    <button id="toStand">Plantarse</button>
+
+  </div>
+
+  <div id="information">
+    <p>Información</p>
+  </div>
+
+  <div id="winner">
+    <p></p>
+    
+
+  </div>
+
+</body>
+
+</html>
