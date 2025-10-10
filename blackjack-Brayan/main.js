@@ -4,7 +4,7 @@ let dealerPoints = 0;
 
 
 const suitsOfTheDeck = ['♣️', '♦️', '♥️', '♠️'];
-const cardsOfTheDeck = ['2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+const cardsOfTheDeck = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
 
 const btnNew = document.querySelector('#btn-new');
 const btnHit = document.querySelector('#btn-hit');
@@ -17,7 +17,7 @@ const playerScore = document.querySelector('#player-score');
 
 
 function createDeck() {
-  
+
   deck = _.flatMap(suitsOfTheDeck, suit => {
     return cardsOfTheDeck.map(value => value + suit);
   });
@@ -36,9 +36,9 @@ function drawCard() {
 
 
 function getCardValue(card) {
-  const value = card.slice(0, -2); 
+  const value = card.slice(0, -2);
   if (['J', 'Q', 'K'].includes(value)) return 10;
-  if (value === 'A') return 11; 
+  if (value === 'A') return 11;
   return parseInt(value);
 }
 
@@ -64,7 +64,7 @@ function playerTurn() {
   updateScores();
 
   if (playerPoints > 21) {
-    message.textContent = 'Te pasaste. Dealer gana 😞';
+    message.textContent = 'Dealer gana 😞';
     endGame();
   } else if (playerPoints === 21) {
     message.textContent = '¡Blackjack! 🎉';
