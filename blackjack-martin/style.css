@@ -1,0 +1,95 @@
+body {
+  background: radial-gradient(circle, #064663, #041C32);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.hands {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.hand {
+  width: 45%;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.card {
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 0 5px rgba(255,255,255,0.2);
+}
+
+.card.red {
+  color: red;
+}
+
+.controls {
+  margin: 20px 0;
+}
+
+button {
+  background: #ECB365;
+  border: none;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover:enabled {
+  transform: scale(1.05);
+  background: #FFD97D;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.message {
+  font-size: 20px;
+  margin-top: 15px;
+  min-height: 30px;
+}

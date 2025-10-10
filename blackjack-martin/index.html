@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack vs IA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>🃏 Blackjack vs IA 🤖</h1>
+
+    <div class="scoreboard">
+      <p>Ronda: <span id="round">1</span> / 5</p>
+      <p>Jugador: <span id="playerWins">0</span> victorias</p>
+      <p>IA: <span id="aiWins">0</span> victorias</p>
+    </div>
+
+    <div class="hands">
+      <div class="hand" id="playerArea">
+        <h2>👤 Tú</h2>
+        <div class="cards" id="playerCards"></div>
+        <p>Puntos: <span id="playerPoints">0</span></p>
+      </div>
+
+      <div class="hand" id="aiArea">
+        <h2>🤖 IA</h2>
+        <div class="cards" id="aiCards"></div>
+        <p>Puntos: <span id="aiPoints">0</span></p>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button id="btnAsk" disabled>Pedir carta 🃏</button>
+      <button id="btnRefuse" disabled>Plantarse ✋</button>
+      <button id="btnStart">Iniciar juego ▶</button>
+    </div>
+
+    <div id="message" class="message"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
