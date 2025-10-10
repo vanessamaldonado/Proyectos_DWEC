@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego Blackjack</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <h1 class="titulo"><span class="principal">Blackjack</span></h1>
+      <button onclick="newGame()" class="inicio">Nuevo Juego</button>
+      <button class="pedir">Plantarse</button>
+
+      <div class="tipos">
+        <h2 class="tituloSecundario">Valores de las cartas</h2>
+        <p class="cartasAce">🂡 <span class="arrow">→</span> 1/11</p>
+        <p class="twoTen">🂢 🂪 <span class="arrow">→</span> = 2–10</p>
+        <p class="KingQueen">🂫 🂭 🂮 <span class="arrow">→</span> 10</p>
+        <img id="joker" src="balatrez.webp" alt="joker" />
+
+        <div class="score">
+          <h2 class="tituloPuntuacion">Score</h2>
+          <p class="pUsuario">Dealer: <span class="pointsD">0</span></p>
+          <p class="pUsuario">Player: <span class="pointsP">0</span></p>
+        </div>
+
+        <div class="game">
+          <div
+            onclick="drawCard()"
+            class="deck"
+            onmouseenter="texto()"
+            onmouseleave="eliminar()"
+            id="deck"
+          >
+            <span class="robar">Robar carta</span>
+          </div>
+
+          <!-- Contenedor para cartas -->
+          <div class="handsContainer">
+            <div class="dealerHand"></div>
+            <div class="playerHand"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
