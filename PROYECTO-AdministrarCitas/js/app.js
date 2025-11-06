@@ -48,6 +48,14 @@ function newAppointment(e) {
         showAlert('Todos los campos son obligatorios', 'error');
         return;
     }
+   
+    /************************comprobación fecha pasada********************* */
+    const appointmentDate = new Date(date.replace('-','/')+ ' ' +time);
+    if (appointmentDate <= new Date()){
+        showAlert('No puede elegir una fecha pasada','error');
+        return;
+    }
+
 
     if(editing) {
         manageAppointments.editAppointment({ ...appointmentObj });
@@ -116,6 +124,8 @@ const manageAppointments = new Appointments();
     function  displayAppointments( appointments ) {
         clearHTML();
 
+        appointments.sort((a, b) => new Date(a.date + ' ' + a.time) - new Date(b.date + ' ' + b.time));
+     
         appointments.forEach(appointment => {
             const { pet, owner, phone, date, time, symptoms, id } = appointment;
 
@@ -178,11 +188,28 @@ function resetAppointmentObj() {
 }
 
 function deleteAppointment(id) {
-   /***********COMPLETAR*************/
+    manageAppointments.deleteAppointment(id);
+    displayAppointments(manageAppointments.appointments);
 }
 
 function loadEdit(appointment) {
-  /***********COMPLETAR*************/
+    const { pet, owner, phone, date, time, symptoms, id } = appointment;
+
+    appointmentObj.pet = pet;
+    appointmentObj.owner = owner;
+    appointmentObj.phone = phone;
+    appointmentObj.date = date;
+    appointmentObj.time = time;
+    appointmentObj.symptoms = symptoms;
+    appointmentObj.id = id;
+
+    petInput.value = pet;
+    ownerInput.value = owner;
+    phoneInput.value = phone;
+    dateInput.value = date;
+    timeInput.value = time;
+    symptomsInput.value = symptoms;
 
     form.querySelector('button[type="submit"]').textContent = 'Guardar cambios';
+    editing = true;
 }
