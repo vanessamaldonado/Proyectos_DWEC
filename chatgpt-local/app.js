@@ -44,6 +44,10 @@ form.addEventListener('submit', async (event) => {
 
   // Mostramos el mensaje del usuario
   /**************************COMPLETAR************/
+ 
+  addMessage(text,"user");
+  input.value="";
+  button.disabled=true;
 
   // Guardamos el mensaje
   messages.push({ role: "user", content: text });
@@ -53,12 +57,13 @@ form.addEventListener('submit', async (event) => {
 
   let reply = "";
   const messageBox = addMessage("", "bot");
-
+ 
   // Recibimos la respuesta poco a poco
   for await (const chunk of stream) {
     const part = chunk.choices[0]?.delta?.content || "";
     reply += part;
     messageBox.textContent = reply;
+    messageBox.innerHTML = `<strong>GPT:</strong> ${reply}`;
   }
 
   // Guardamos la respuesta completa
@@ -70,4 +75,14 @@ form.addEventListener('submit', async (event) => {
 // --- Función auxiliar para mostrar mensajes en pantalla ---
 function addMessage(text, sender) {
  /**************************COMPLETAR************/
+ const item = document.createElement('Li');
+ item.className = `message ${sender}`;
+
+ const name = sender === 'bot' ? 'GPT' : 'Tú';
+ item.innerHTML = `<strong>${name}:</strong> ${text}`;
+
+ messagesList.appendChild(item);
+ container.scrollTop = container.scrollHeight;
+ return item;
+
 }
