@@ -9,6 +9,14 @@ const symptomsInput = document.querySelector('#symptoms');
 const form = document.querySelector('#new-appointment');
 form.addEventListener('submit', newAppointment);
 
+// Botones adicionales
+const btnClear = document.querySelector('#btn-clear');
+const btnDeleteAll = document.querySelector('#btn-delete-all');
+
+// Listeners para los botones
+btnClear.addEventListener('click', clearForm);
+btnDeleteAll.addEventListener('click', deleteAllAppointments);
+
 // Container for appointments
 const appointmentsContainer = document.querySelector('#appointment');
 
@@ -212,4 +220,23 @@ function loadEdit(appointment) {
 
     form.querySelector('button[type="submit"]').textContent = 'Guardar cambios';
     editing = true;
+}
+
+function clearForm() {
+    form.reset();
+    resetAppointmentObj();
+    showAlert('Formulario limpiado', 'success');
+}
+
+function deleteAllAppointments() {
+    if (manageAppointments.appointments.length === 0) {
+        showAlert('No hay citas para borrar', 'error');
+        return;
+    }
+
+    if (confirm('¿Estás seguro de que deseas eliminar todas las citas?')) {
+        manageAppointments.appointments = [];
+        clearHTML();
+        showAlert('Todas las citas han sido eliminadas', 'success');
+    }
 }
