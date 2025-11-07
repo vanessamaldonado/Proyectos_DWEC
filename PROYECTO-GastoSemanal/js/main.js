@@ -10,13 +10,12 @@ function eventListeners() {
     expenseList.addEventListener('click', deleteExpense);
 }
 
-/***************************COMPLETAR************************* */
-// Classes  
+// Classes
 class Budget {
-     //Se ejecuta automáticamente cuando creas un nuevo objeto Budget. Guarda:
+    //Se ejecuta automáticamente cuando creas un nuevo objeto Budget. Guarda:
     //this.budget: el presupuesto total (convertido a número).
     //this.remaining: el dinero restante (inicialmente igual al presupuesto total).
-    //this.expenses: un array vacío donde se guardarán los gastos.
+   //this.expenses: un array vacío donde se guardarán los gastos.
     constructor(budget) {
         this.budget = Number(budget);
         this.remaining = Number(budget);
@@ -24,21 +23,32 @@ class Budget {
     }
 
     newExpense(expense) {
-       //Recibe un objeto gasto (por ejemplo { id: 1, name: "Comida", amount: 50 }).
-       //Lo agrega al array expenses.
-       //debe recalcular el dinero restante.
+        this.expenses.push(expense);
+        this.calculateRemaining();
     }
 
     removeExpense(id) {
-       //Elimina un gasto según su id.
-       //Puedes usar .filter() para quedarte solo con los gastos que no tengan ese id.
-       //debe recalcula el dinero restante.
+        this.expenses = this.expenses.filter(expense => expense.id.toString() !== id);
+        this.calculateRemaining();
     }
 
     calculateRemaining() {
-      //Suma todas las cantidades (amount) de los gastos.
-      //Calcula cuánto dinero queda
+        const spent = this.expenses.reduce((total, expense) => total + expense.amount, 0);
+        this.remaining = this.budget - spent;
     }
+
+    /* Versión simple:
+    calculateRemaining() {
+        let spent = 0;
+
+        // Recorre todos los gastos y suma sus montos
+        for (const expense of this.expenses) {
+            spent += expense.amount;
+        }
+
+        // Calcula el dinero restante
+        this.remaining = this.budget - spent;
+    }*/
 }
 
 class UI {
@@ -48,7 +58,11 @@ class UI {
     }
 
     showAlert(message, type) {
-         /****************************SOLVENTAR Multiples mensajes de alertas************************* */
+         // Evitar múltiples alertas
+        const existingAlert = document.querySelector('.primario .alert');
+        if (existingAlert) {
+            existingAlert.remove();
+        }
 
         const divMessage = document.createElement('div');
         divMessage.classList.add('text-center', 'alert');
@@ -139,7 +153,12 @@ function askBudget() {
         window.location.reload();
     }
 
-    /*************************************SOLVENTAR limitar el presupueto a introducir************** */
+    // Nuevo límite máximo
+    if (userBudget > 10000) {
+        ui.showAlert('El presupuesto no puede superar los 10.000 €', 'error');
+        return;
+    }
+
     budget = new Budget(userBudget);
     ui.insertBudget(budget);
 }
