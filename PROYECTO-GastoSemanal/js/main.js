@@ -14,7 +14,9 @@ function eventListeners() {
 // Classes  
 class Budget {
     constructor(budget) {
-       
+        this.budget = Number(budget);
+        this.remaining = Number(budget);
+        this.expenses = [];
     }
 
     newExpense(expense) {
@@ -176,3 +178,4 @@ function deleteExpense(e) {
         e.target.parentElement.remove();
     }
 }
+
