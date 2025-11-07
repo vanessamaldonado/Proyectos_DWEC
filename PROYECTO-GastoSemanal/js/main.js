@@ -13,6 +13,10 @@ function eventListeners() {
 /***************************COMPLETAR************************* */
 // Classes  
 class Budget {
+     //Se ejecuta automáticamente cuando creas un nuevo objeto Budget. Guarda:
+    //this.budget: el presupuesto total (convertido a número).
+    //this.remaining: el dinero restante (inicialmente igual al presupuesto total).
+    //this.expenses: un array vacío donde se guardarán los gastos.
     constructor(budget) {
         this.budget = Number(budget);
         this.remaining = Number(budget);
@@ -20,15 +24,20 @@ class Budget {
     }
 
     newExpense(expense) {
-       
+       //Recibe un objeto gasto (por ejemplo { id: 1, name: "Comida", amount: 50 }).
+       //Lo agrega al array expenses.
+       //debe recalcular el dinero restante.
     }
 
     removeExpense(id) {
-       
+       //Elimina un gasto según su id.
+       //Puedes usar .filter() para quedarte solo con los gastos que no tengan ese id.
+       //debe recalcula el dinero restante.
     }
 
     calculateRemaining() {
-      
+      //Suma todas las cantidades (amount) de los gastos.
+      //Calcula cuánto dinero queda
     }
 }
 
@@ -178,4 +187,3 @@ function deleteExpense(e) {
         e.target.parentElement.remove();
     }
 }
-
