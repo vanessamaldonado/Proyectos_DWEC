@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-- Construir una pequeña aplicación CRUD en memoria (Create, Read, Update, Delete) que:
+Construir una pequeña aplicación CRUD en memoria (Create, Read, Update, Delete) que:
 - Use un formulario HTML.
 - Guarde cada registro como un objeto dentro de un array.
 - Encapsule la lógica en una clase (gestor, controlador o manager).
