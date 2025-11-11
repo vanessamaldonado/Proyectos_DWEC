@@ -154,6 +154,7 @@ class Gestor {
 const gestor = new Gestor();
 document.addEventListener('DOMContentLoaded', () => gestor.mostrar());
 ```
+DOMContentLoaded asegura que el JavaScript empiece solo cuando el HTML ya existe.
 
 ## Paso 4: Manejador del formulario
 ```js
