@@ -1,0 +1,195 @@
+/* === ESTILOS GENERALES === */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f8f9fb;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 2rem;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+/* === FORMULARIO === */
+form {
+  background-color: #fff;
+  padding: 1.5rem 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 0 0 320px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #004aad;
+}
+
+form input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 4px rgba(0, 120, 212, 0.3);
+}
+
+form button {
+  width: 100%;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+/* === LISTA DE PRÉSTAMOS === */
+#listaPrestamos {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#listaPrestamos li {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  border-left: 5px solid transparent;
+  line-height: 1.4;
+}
+
+#listaPrestamos li strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #004aad;
+}
+
+#listaPrestamos li em {
+  font-style: normal;
+  font-weight: 500;
+  color: #222;
+}
+
+#listaPrestamos li small {
+  display: block;
+  color: #555;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+}
+
+#listaPrestamos li div {
+  margin-top: 0.6rem;
+}
+
+#listaPrestamos button {
+  border: none;
+  padding: 0.45rem 0.9rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.1s ease-in-out;
+}
+
+#listaPrestamos button:hover {
+  transform: scale(1.05);
+}
+
+#listaPrestamos button.editar {
+  background-color: #ffc107;
+  color: #333;
+}
+
+#listaPrestamos button.eliminar {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* === COLORES DE ESTADO === */
+#listaPrestamos li.activo {
+  border-left-color: #0078d4;
+}
+
+#listaPrestamos li.atrasado {
+  border-left-color: #dc3545;
+  background-color: #fff3f3;
+}
+
+/* === MENSAJE === */
+#mensaje {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: none;
+}
+
+#mensaje.ok {
+  display: block;
+  background-color: #d4edda;
+  border: 1px solid #a3d3a1;
+  color: #155724;
+}
+
+#mensaje.error {
+  display: block;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 900px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  form {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #listaPrestamos {
+    width: 100%;
+  }
+}
