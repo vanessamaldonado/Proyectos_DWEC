@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gestor de Préstamos de Biblioteca</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <h1>Gestor de Préstamos de Biblioteca</h1>
+  <div id="mensaje"></div>
+
+  <div class="contenedor">
+    <form id="formPrestamo">
+      <label for="idSocio">ID de socio</label>
+      <input id="idSocio" placeholder="Ej: S001" >
+
+      <label for="nombreLector">Nombre del lector</label>
+      <input id="nombreLector" placeholder="Ej: Ana Pérez">
+
+      <label for="telefono">Teléfono</label>
+      <input id="telefono" type="tel" placeholder="Ej: 666555444">
+
+      <label for="tituloLibro">Título del libro</label>
+      <input id="tituloLibro" placeholder="Ej: El Quijote">
+
+      <label for="idLibro">ID del libro</label>
+      <input id="idLibro" placeholder="Ej: L104">
+
+      <label for="fechaPrestamo">Fecha de préstamo</label>
+      <input id="fechaPrestamo" type="date">
+
+      <label for="fechaDevolucion">Fecha de devolución prevista</label>
+      <input id="fechaDevolucion" type="date">
+
+      <button type="submit">Guardar</button>
+    </form>
+
+<!--NUEVO-->
+<div class="controles">
+  <label for="buscarSocio">Buscar por ID de socio:</label>
+  <input id="buscarSocio" placeholder="Ej: S001">
+  
+  <label for="ordenarPor">Ordenar por:</label>
+  <select id="ordenarPor">
+    <option value="fechaDevolucion">Fecha de devolución</option>
+    <option value="fechaPrestamo">Fecha de préstamo</option>
+    <option value="nombreLector">Nombre del lector</option>
+  </select>
+
+  <button id="limpiarPrestamos">Limpiar todos los préstamos</button>
+</div>
+<!--NUEVO-->
+    
+    <ul id="listaPrestamos"></ul>
+  </div>
+</body>
+</html>

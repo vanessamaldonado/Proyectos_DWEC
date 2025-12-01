@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestor de Gastos Personales</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <h1>Gestor de Gastos Personales</h1>
+
+  <div class="contenedor">
+
+    <!-- ================= FORMULARIO ================= -->
+    <section class="panel">
+      <h2>Registrar gasto</h2>
+
+      <form id="formGasto">
+
+        <label>Concepto del gasto</label>
+        <input id="concepto" type="text" placeholder="Ej: Compra supermercado" />
+
+        <label>Fecha del gasto</label>
+        <input id="fecha" type="date" />
+
+        <label>Importe (€)</label>
+        <input id="importe" type="text" placeholder="Ej: 45.90" />
+
+        <label>Categoría</label>
+        <select id="categoria">
+          <option value="">Seleccionar</option>
+          <option value="Alimentación">Alimentación</option>
+          <option value="Transporte">Transporte</option>
+          <option value="Ocio">Ocio</option>
+          <option value="Otros">Otros</option>
+        </select>
+
+        <button type="submit" class="btn-guardar">Guardar</button>
+
+      </form>
+
+      <button id="btnLimpiar" class="btn-secundario">Limpiar formulario</button>
+
+      <button id="btnEliminarTodos" class="btn-peligro">Eliminar todos los gastos</button>
+
+      <div id="mensaje" class="mensaje"></div>
+    </section>
+
+
+    <!-- ================= LISTADO ================= -->
+    <section class="panel">
+      <h2>Listado de gastos</h2>
+      <ul id="listaGastos"></ul>
+
+      <div class="resumen">
+        <strong>Total gastado:</strong>
+        <span id="total">0.00</span> €
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

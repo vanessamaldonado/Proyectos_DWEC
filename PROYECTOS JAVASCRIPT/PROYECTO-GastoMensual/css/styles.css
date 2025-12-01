@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 40px;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+}
+
+.panel {
+  flex: 1;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+label {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.btn-guardar {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: #006be6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.btn-secundario,
+.btn-peligro {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-secundario {
+  background: #777;
+  color: white;
+}
+
+.btn-peligro {
+  background: #c62828;
+  color: white;
+}
+
+.mensaje {
+  margin-top: 15px;
+  padding: 10px;
+  display: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.ok {
+  background: #d4edda;
+  color: #155724;
+}
+
+.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-left: 5px solid #4caf50;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.fila-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.meta {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.acciones {
+  margin-top: 10px;
+}
+
+.acciones button {
+  padding: 6px 12px;
+  border: none;
+  margin-right: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.acciones .editar {
+  background: #f4b400;
+}
+
+.acciones .eliminar {
+  background: #e53935;
+  color: white;
+}
+
+.resumen {
+  margin-top: 20px;
+  padding: 10px;
+  background: #eef2f7;
+  border-radius: 8px;
+  font-size: 17px;
+}
