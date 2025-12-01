@@ -1,0 +1,219 @@
+
+/* === Generales === */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f7f9fb;
+  color: #333;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  color: #004aad;
+  margin-bottom: 2rem;
+}
+
+/* === Contenedor principal === */
+.contenedor {
+  display: grid;
+  grid-template-areas:
+    "form lista"
+    "form resumen";
+  grid-template-columns: 340px 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+/* Asigna las áreas */
+form {
+  grid-area: form;
+}
+
+#listaGastos {
+  grid-area: lista;
+}
+
+.panel-resumen {
+  grid-area: resumen;
+}
+
+/* === Formulario === */
+form {
+  background-color: #ffffff;
+  padding: 1.5rem 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 0 0 320px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #004aad;
+}
+
+form input, form select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+form input:focus, form select:focus {
+  outline: none;
+  border-color: #0078d4;
+  box-shadow: 0 0 4px rgba(0,120,212,0.3);
+}
+
+form button {
+  width: 100%;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+  background-color: #005fa3;
+}
+
+/* === Resumen === */
+.panel-resumen {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  flex: 0 0 260px;
+}
+
+.panel-resumen h2 {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.panel-resumen p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* === Lista de gastos === */
+#listaGastos {
+  flex: 1 1 500px;      /* ancho máximo más controlado */
+  max-width: 700px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+#listaGastos li {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  border-left: 5px solid #e0e0e0;
+  line-height: 1.35;
+}
+
+#listaGastos li[data-categoria="Alimentación"] { border-left-color: #28a745; }
+#listaGastos li[data-categoria="Transporte"]   { border-left-color: #007bff; }
+#listaGastos li[data-categoria="Ocio"]         { border-left-color: #ffc107; }
+#listaGastos li[data-categoria="Otros"]        { border-left-color: #6c757d; }
+
+#listaGastos li .fila-top {
+  display: flex;
+  justify-content: flex-start;   /* texto e importe más cerca */
+  align-items: baseline;
+  gap: 2rem;                     /* separación moderada */
+}
+
+
+#listaGastos li .concepto {
+  font-weight: 700;
+  color: #004aad;
+  font-size: 1.05rem;
+}
+
+#listaGastos li .importe {
+  font-weight: 700;
+}
+
+#listaGastos li .meta {
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+#listaGastos li .acciones {
+  margin-top: 0.6rem;
+}
+
+#listaGastos li button {
+  border: none;
+  padding: 0.45rem 0.9rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: transform 0.1s ease-in-out;
+}
+
+#listaGastos li button:hover { transform: scale(1.05); }
+#listaGastos li button.editar   { background-color: #ffc107; color: #333; }
+#listaGastos li button.eliminar { background-color: #dc3545; color: #fff; }
+
+/* === Mensajes === */
+#mensaje {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: none;
+}
+#mensaje.ok {
+  display: block;
+  background-color: #d4edda;
+  border: 1px solid #a3d3a1;
+  color: #155724;
+}
+#mensaje.error {
+  display: block;
+  background-color: #f8d7da;
+  border: 1px solid #f5c2c7;
+  color: #842029;
+}
+
+/* En pantallas pequeñas, disposición vertical */
+@media (max-width: 900px) {
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form, .panel-resumen, #listaGastos {
+    width: 100%;
+    max-width: 700px;
+  }
+}

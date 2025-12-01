@@ -1,0 +1,19 @@
+# GUÍA PARA DESCARGAR, REALIZAR Y ENTREGAR EL EXÁMEN
+- Selecciona la rama con tu nombre
+    - En el repositorio del examen, abre el menú de ramas.
+    - Selecciona tu rama (ej. alumno_Ana).
+- Descargar tu rama
+    - Desde Code → Download ZIP.
+    - Descomprime y abre la carpeta en VSCode.
+- Realizar el examen
+    - Modificar lo que consideres de los ficheros proporcionados: index.html, styles.css y app.js.
+    - No crear archivos nuevos salvo que se indique.
+- Una vez hayas finalizado sube tu examen al repositorio
+    - Desde GitHub, selecciona tu rama.
+    - Add file → Upload files.
+    - Adjunta tus tres archivos.
+    - Haz un commit con el botón y pon el mensaje: “Examen finalizado – Nombre”.
+- Crear Pull Request
+    - Pull Requests → New Pull Request.
+    - Base: main | Compare: tu_rama.
+    - Crear PR y enviarlo.
