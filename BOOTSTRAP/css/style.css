@@ -1,0 +1,21 @@
+    body {
+        background: #EEEFF2;
+        color: #fff;
+    }
+    header {
+        background: #cccfe7;
+        padding: 20px;
+    }
+    main article {
+        color: #000;
+        background: #587b55;
+        padding: 20px;
+    }
+    aside {
+        background: #238399;
+        padding: 20px;
+    }
+    footer {
+        background: #d29693;
+        padding: 20px;
+    }
