@@ -133,3 +133,4 @@ Elegimos un componente de tipo nav y lo ponemos en el footer:
     </div>
 </footer>
 ```
+
