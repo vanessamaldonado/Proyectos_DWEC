@@ -3,7 +3,7 @@
 Vas a crear una aplicación de consola en TypeScript con menú interactivo (usando readline) y una o más clases con métodos para resolver 8 operaciones.
 
 ## Requisitos generales
-- El programa debe tener un menú con opciones 1–10 y 0 para salir.
+- El programa debe tener un menú con opciones 1–8 y 0 para salir.
 - Cada opción debe:
   - Pedir los datos necesarios por consola.
   - Llamar al método que corresponda.
@@ -100,3 +100,4 @@ Sube tu código a un repositorio en tu cuenta de GitHub. El repositorio debe ser
 - Entrega únicamente el enlace al repositorio de GitHub en la plataforma Classroom.
 
 - No es necesario subir archivos comprimidos (.zip).
+
