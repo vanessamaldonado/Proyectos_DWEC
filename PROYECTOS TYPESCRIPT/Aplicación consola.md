@@ -1,6 +1,6 @@
 # Proyecto TypeScript: Aplicación de consola
 
-Vas a crear una aplicación de consola en TypeScript con menú interactivo (usando readline) y una o más clases con métodos para resolver 10 operaciones.
+Vas a crear una aplicación de consola en TypeScript con menú interactivo (usando readline) y una o más clases con métodos para resolver 8 operaciones.
 
 ## Requisitos generales
 - El programa debe tener un menú con opciones 1–10 y 0 para salir.
@@ -98,4 +98,5 @@ Sube tu código a un repositorio en tu cuenta de GitHub. El repositorio debe ser
 ## Entrega del enlace
 
 - Entrega únicamente el enlace al repositorio de GitHub en la plataforma Classroom.
+
 - No es necesario subir archivos comprimidos (.zip).
