@@ -1,0 +1,51 @@
+.field-error {
+  color: red;
+}
+.form-page{
+  display: flex;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+.form-page form{
+  width: min(520px, 100%);
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.06);
+}
+
+/* Campos */
+.form-page label{
+  display: block;
+  margin: 10px 0 6px;
+  font-weight: 600;
+}
+
+.form-page input,
+.form-page select,
+.form-page textarea{
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Botón */
+.form-page button{
+  margin-top: 14px;
+  width: 100%;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: #6c63ff;
+  color: white;
+  cursor: pointer;
+}
+
+.form-page button:disabled{
+  opacity: .6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,18 @@
+<form [formGroup]="movieForm" (ngSubmit)="handleSubmit()">
+
+<fieldset>
+  <label for="movieName">Movie Name</label>
+  <input id="movieName" type="text" formControlName="name">
+</fieldset>
+
+<fieldset>
+  <label for="movieDuration">Duration</label>
+  <input id="movieDuration" type="text" formControlName="duration">
+</fieldset>
+
+<fieldset>
+  <label for="movieDirector">Director</label>
+  <input id="movieDirector" type="text" formControlName="director">
+</fieldset>
+
+<button type="submit">Create Movie</button>
