@@ -1,0 +1,12 @@
+.player {
+  width: 26rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #222;
+  border-radius: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

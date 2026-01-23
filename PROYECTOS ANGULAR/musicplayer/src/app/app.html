@@ -1,0 +1,14 @@
+<div style="text-align:center">
+  <h1>Reproductor simulado</h1>
+
+  <app-reproductor
+    [canciones]="playlist"
+    [intervaloMs]="3000"
+    (cambioCancion)="actualizar($event)">
+  </app-reproductor>
+
+  <h2>Evento</h2>
+  <h3>{{mensaje}}</h3>
+</div>
+
+<router-outlet />
