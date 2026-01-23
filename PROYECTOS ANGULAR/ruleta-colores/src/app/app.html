@@ -1,0 +1,14 @@
+<div class="contenedor">
+
+  <div class="ruleta">
+    <app-color [color]="color1"></app-color>
+    <app-color [color]="color2"></app-color>
+    <app-color [color]="color3"></app-color>
+  </div>
+
+  <button (click)="girar()">Girar ruleta</button>
+
+  <p>Resultado: {{ resultado }}</p>
+
+</div>
+<router-outlet />
