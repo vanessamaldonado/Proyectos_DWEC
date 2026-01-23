@@ -1,0 +1,37 @@
+<form [formGroup]="contactForm" (ngSubmit)="submit()">
+  <div class="form-floating mb-3">
+    <input type="text" class="form-control"  formControlName="name">
+    <label>Nombre</label>
+     @if(name.hasError('required') && name.touched) {
+     <p class="field-error">Name is required</p>
+    }
+     @else if(name.hasError("minlength") && name.touched) {
+     <p class="field-error">Name must be at least 10 characters long</p>
+    }
+  </div>
+
+  <div class="form-floating mb-3">
+    <input type="email" class="form-control" placeholder="Mail" formControlName="email">
+    <label>Email</label>
+    @if (email.hasError('required') && email.touched) {
+    <p class="field-error">Email is required</p>
+    }
+    @else if (email.hasError('email') && email.touched) {
+    <p class="field-error">The email is not valid</p>
+    }
+  </div>
+
+  <div class="form-floating mb-3">
+    <textarea class="form-control" placeholder="Mensaje" style="height: 160px" formControlName="message"></textarea>
+    <label>Mensaje</label>
+     @if(message.hasError('required') && message.touched) {
+       <p class="field-error">Mensaje is required</p>
+    }
+    @else if(message.hasError("maxlength") && message.touched) {
+    <div>Message cannot be longer than 500 characters</div>
+    }
+  </div>
+
+  <button class="btn btn-primary" type="submit" [disabled]="contactForm.invalid">Enviar</button>
+</form>
+<div class="resultado">{{contact}}</div>
