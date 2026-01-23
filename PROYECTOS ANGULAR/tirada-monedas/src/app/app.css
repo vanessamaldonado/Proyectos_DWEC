@@ -1,0 +1,14 @@
+.contenedor-juego {
+  display: flex;
+  flex-direction: column; /* Los elementos se apilan verticalmente */
+  align-items: center;    /* Centra todo horizontalmente */
+  justify-content: center; /* Centra todo verticalmente (opcional si quieres ocupar toda la pantalla) */
+  min-height: 100vh;      /* Que ocupe toda la altura de la ventana */
+  font-family: Arial, sans-serif;
+}
+
+.fila-monedas {
+  display: flex;           /* Hace que los hijos se alineen en fila */
+  gap: 20px;               /* Espacio entre las monedas */
+  margin-bottom: 20px;     /* Separación del botón */
+}

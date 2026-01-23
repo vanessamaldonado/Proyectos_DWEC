@@ -1,0 +1,12 @@
+<div class="contenedor-juego">
+  <div class="fila-monedas">
+    <app-moneda [caraCruz]="moneda1"></app-moneda>
+    <app-moneda [caraCruz]="moneda2"></app-moneda>
+    <app-moneda [caraCruz]="moneda3"></app-moneda>
+  </div>
+
+  <button (click)="tirar()">Tirar Monedas</button>
+
+  <p>Resultado: {{ resultado }}</p>
+</div>
+<router-outlet />
